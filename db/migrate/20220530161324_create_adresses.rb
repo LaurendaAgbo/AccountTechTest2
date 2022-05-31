@@ -6,7 +6,7 @@ class CreateAdresses < ActiveRecord::Migration[7.0]
       t.string :commune_name
       t.string :locality_name
       t.string :rue_name
-      t.string :postal_code
+      t.string :postal_code, :default => '?'
 
       t.timestamps
     end

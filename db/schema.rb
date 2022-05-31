@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_30_161324) do
     t.string "commune_name"
     t.string "locality_name"
     t.string "rue_name"
-    t.string "postal_code"
+    t.string "postal_code", default: "?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
