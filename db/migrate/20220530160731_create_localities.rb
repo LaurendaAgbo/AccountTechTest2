@@ -13,8 +13,8 @@ class CreateLocalities < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :cantons, :code, unique: true, name: 'cantons_on_code_2'
-    add_index :communes, :code, unique: true
+    add_index :cantons, :code, unique: false, name: 'cantons_on_code_2'
+    add_index :communes, :code, unique: false
     add_foreign_key :localities, :cantons, column: :canton_code, primary_key: :code
     add_foreign_key :localities, :communes, column: :commune_code, primary_key: :code
   end

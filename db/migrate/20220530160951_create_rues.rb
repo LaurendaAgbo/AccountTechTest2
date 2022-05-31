@@ -16,7 +16,7 @@ class CreateRues < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :localities, :number, unique: true
+    add_index :localities, :number, unique: false
     add_foreign_key :rues, :localities, column: :locality_number, primary_key: :number
   end
 

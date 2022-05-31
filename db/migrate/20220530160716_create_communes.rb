@@ -9,7 +9,7 @@ class CreateCommunes < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :cantons, :code, unique: true
+    add_index :cantons, :code, unique: false
     add_foreign_key :communes, :cantons, column: :canton_code, primary_key: :code
   end
 

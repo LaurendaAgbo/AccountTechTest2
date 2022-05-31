@@ -8,7 +8,7 @@ class CreateCantons < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :districts, :code, unique: true
+    add_index :districts, :code, unique: false
     add_foreign_key :cantons, :districts, column: :district_code, primary_key: :code
   end
 
